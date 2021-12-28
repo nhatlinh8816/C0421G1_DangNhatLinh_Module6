@@ -1,0 +1,15 @@
+package assigment1.day9;
+
+public class Test {
+	public static void main(String[] args) {
+		try {
+			
+		} catch (Exception e) {
+			System.out.println("Exception");// TODO: handle exception
+		}finally {
+			System.out.println("Finally");
+			
+		}
+		System.out.println("Finish");
+	}
+}

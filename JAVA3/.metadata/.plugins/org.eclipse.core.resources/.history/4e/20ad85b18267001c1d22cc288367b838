@@ -1,0 +1,11 @@
+package btMrThang_baiException;
+
+public class Book {
+	private int id;
+	private String name
+	public Book() {
+		super();
+	};
+	
+	
+}

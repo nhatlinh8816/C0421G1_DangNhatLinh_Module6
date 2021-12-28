@@ -1,0 +1,11 @@
+package assigment2;
+
+public class CandidateManagement {
+	Certificate certificates1 = new Certificate(1, "JAVA", "Good", "1/1/2000");
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

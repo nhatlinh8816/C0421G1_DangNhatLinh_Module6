@@ -1,0 +1,60 @@
+package assigment1.day9;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+
+public class WriteFile {
+	static final String FILE_PATH = "G:\\JAVA3\\PreDev\\src\\assigment1\\day9\\error.txt";
+	static final String EMAIL_REGEX = "^\\w+@\\w+(\\.\\w+){1,2}$";
+	static final String PHONE_REGEX = "^(091)[\\d]{7}$";
+	static List<Error> errors = new ArrayList<>();
+	static final String NEWLINE = "\n";
+	static final String COMMA = ",";
+	public void writeFile() {
+		File file = new File(FILE_PATH);
+		FileWriter fileWriter = null;
+		if (!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		try {
+//			List<Student> students = new ReadFile().readFile();
+//			int line = 1;
+//			String errorEmail = null;
+//			String errorPhone = null;
+//			for (Student student : students) {
+//				if (!Pattern.matches(EMAIL_REGEX, student.getEmail())) {
+//					errorEmail = "Wrong format email";
+//				}
+//				if (!Pattern.matches(PHONE_REGEX, student.getPhone())) {
+//					errorPhone = "Wrong format phone";
+//				}
+//				errors.add(new Error(line,errorEmail,errorPhone));
+//			}
+//			fileWriter = new FileWriter(file,true);
+//			for (Error error : errors) {
+//				fileWriter.append("Line "+ String.valueOf(error.getLine())+":");
+//				fileWriter.append(error.getErrorEmail());
+//				fileWriter.append(COMMA);
+//				fileWriter.append(error.getErrorPhone());
+//			}
+			fileWriter = new FileWriter(file,true);
+			fileWriter.append(COMMA);
+			fileWriter.append("123");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		new WriteFile().writeFile();
+	}
+}

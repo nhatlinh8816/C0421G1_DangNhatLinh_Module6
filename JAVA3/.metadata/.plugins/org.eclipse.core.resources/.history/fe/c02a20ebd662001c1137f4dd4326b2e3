@@ -1,0 +1,10 @@
+package assigment2;
+
+public class Test {
+	
+	
+		 static void m(Object x) {System.out.print("Object");}
+		 static void m(String x) {System.out.print("String");}
+		 public static void main(String[] args) {m(null);}
+		 
+}

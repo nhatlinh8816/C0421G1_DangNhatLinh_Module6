@@ -1,0 +1,104 @@
+package assigment2;
+
+public class Experience extends Candidate {
+	private int expInYear;
+	private String proSkill;
+	
+
+	public Experience() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public Experience(int expInYear, String proSkill) {
+		this.expInYear = expInYear;
+		this.proSkill = proSkill;
+	}
+
+
+	
+
+
+
+
+	public Experience(int candidateID, String fullName, String birthDay, String phone, String email, int candidateType,
+			Certificate certificate, int expInYear, String proSkill) {
+		super(candidateID, fullName, birthDay, phone, email, candidateType, certificate);
+		this.expInYear = expInYear;
+		this.proSkill = proSkill;
+	}
+
+
+
+	public int getExpInYear() {
+		return expInYear;
+	}
+
+
+	public void setExpInYear(int expInYear) {
+		this.expInYear = expInYear;
+	}
+
+	public String getProSkill() {
+		return proSkill;
+	}
+
+	public void setProSkill(String proSkill) {
+		this.proSkill = proSkill;
+	}
+
+
+
+	@Override
+	public String showInfo() {
+		return "Experience [candidateID=" + candidateID + ", fullName=" + fullName + ", birthDay=" + birthDay
+				+ ", phone=" + phone + ", email=" + email + ", candidateCount=" + candidateCount + ", candidateType="
+				+ candidateType + ", certificate=" + certificate + 
+				", expInYear=" + expInYear +", proSkill=" + proSkill +"]";
+	}
+
+
+	
+	
+}
+
+
+	
+
+
+	
+
+
+	
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+

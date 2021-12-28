@@ -1,0 +1,27 @@
+package assigment2;
+
+public class CandidateManagement {
+	static Certificate certificates1 = new Certificate(1, "JAVA", "Good", "1/1/2000");
+	static Certificate certificates2 = new Certificate(2, "C++", "Good", "1/1/2000");
+	static Certificate certificates3 = new Certificate(3, ".NET", "Normal", "1/1/2000");
+	public static Candidate[] candidates;
+	static {
+		candidates = new Candidate[50];
+		candidates[0] = new Experience(1, "Nam", "13/02/2001", "0818458816", "nam@gmail.com", 0, certificates1, 5, "Java");
+		candidates[1] = new Fresher(1, "Nga", "13/02/2001", "0818458816", "nga@gmail.com", 0, certificates2, "12/01/2019", "S", "DHDT");
+		candidates[2] = new Intern(1, "Hai", "13/02/2001", "0818458816", "hai@gmail.com", 0, certificates3, "CNTT", "III", "DNDN");
+			
+	}
+	
+	public static void main(String[] args) {
+		for (Candidate candidate : candidates) {
+			if (candidate!=null&&candidate instanceof Experience) {
+				System.out.println(candidate.showInfo());
+				System.out.println(candidate.showMe());
+			}
+		}
+		
+		
+	}
+
+}

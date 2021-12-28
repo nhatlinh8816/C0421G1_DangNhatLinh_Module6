@@ -1,0 +1,68 @@
+package assigment2;
+
+public class Intern extends Candidate {
+	private String major;
+	private String semester;
+	private String university;
+	
+	
+	public Intern() {
+	}
+
+
+
+	public Intern(int candidateID, String fullName, String birthDay, String phone, String email, int candidateCount,
+			int candidateType, Certificate certificate, String major, String semester, String university) {
+		super(candidateID, fullName, birthDay, phone, email, candidateCount, candidateType, certificate);
+		this.major = major;
+		this.semester = semester;
+		this.university = university;
+	}
+
+
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getSemester() {
+		return semester;
+	}
+
+	public void setSemester(String semester) {
+		this.semester = semester;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
+	}
+
+
+
+	@Override
+	public String showInfo() {
+		return "Intern [candidateID=" + candidateID + ", fullName=" + fullName + ", birthDay=" + birthDay
+				+ ", phone=" + phone + ", email=" + email + ", candidateCount=" + candidateCount + ", candidateType="
+				+ candidateType + ", certificate=" + certificate + 
+				", major=" + major +
+				", semester=" + semester +
+				", university=" + university +"]";
+	}
+
+	
+	
+
+	
+	
+	
+	
+	
+}

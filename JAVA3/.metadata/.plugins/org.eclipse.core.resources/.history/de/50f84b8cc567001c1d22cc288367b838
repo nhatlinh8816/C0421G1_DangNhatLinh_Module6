@@ -1,0 +1,16 @@
+package assigment1.day9;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+import javax.activation.MailcapCommandMap;
+
+import com.sun.javafx.collections.MappingChange.Map;
+
+
+
+public class Test {
+	public static void main(String[] args) {
+		Map map = new HashMap<>()
+	}}

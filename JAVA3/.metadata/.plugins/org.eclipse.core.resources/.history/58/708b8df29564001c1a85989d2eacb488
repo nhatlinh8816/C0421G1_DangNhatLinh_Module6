@@ -1,0 +1,43 @@
+package assigment2;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCApp {
+	//driver
+	private static final String CONNECT_DRIVER = "com.microsoft.jdbc.sqlserver.SQLServerDriver";
+	//url
+	private static final String CONNECT_URL = "jdbc:microsoft:sqlserver://HOST:1433;"
+			+ "DatabaseName=Test"
+			+ "integratedSecurity=true";
+	//username
+	private static final String CONNECT_USER = "sa";
+	//password
+	private static final String CONNECT_PASSWORD = "123456789";
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		//dang ky driver
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		//KET NOI db
+		//neu connection !=null thi thuc hien dong 
+		Connection connection = null;
+		try {
+			connection = DriverManager.getConnection(CONNECT_URL,CONNECT_USER,CONNECT_PASSWORD);
+			System.out.println("Connect...");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			if (connection!=null) {
+				try {
+					connection.close();
+					System.out.println("Close...");
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}
